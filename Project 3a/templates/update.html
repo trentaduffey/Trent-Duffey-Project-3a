@@ -4,8 +4,12 @@
 {% block content %}
     <h1>Stock Data Input</h1>
     <form action="{{API_KEY}}" method="POST">
-        <label for="title">Stock Ticker</label><br>
-        <input type="text" id="title" name="title" value="{{ Stock Ticker }}"><br><br>
+        <label for="stock_select">Stock Ticker</label><br>
+        <select id="graph_type" name="graph_type">
+            <option value="null"> - </option>
+
+        </select><br><br>
+
         <label for="graph_type">Graph Type</label><br>
         <select id="graph_type" name="graph_type">
             <option value="null"> - </option>
@@ -21,8 +25,13 @@
             <option value="Weekly">Weekly</option>
             <option value="Monthly">Monthly</option>
         </select><br><br>
-        <label for="due_date">Start Date</label><br>
+        
+        <label for="start_date">Start Date</label><br>
         <input type="date" ><br><br>
+        
+        <label for="end_date">End Date</label><br>
+        <input type="date" ><br><br>
+
         <input type="submit" value="Submit">
 
     </form>
