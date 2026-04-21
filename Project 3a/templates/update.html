@@ -8,16 +8,18 @@
         <input type="text" id="title" name="title" value="{{ Stock Ticker }}"><br><br>
         <label for="graph_type">Graph Type</label><br>
         <select id="graph_type" name="graph_type">
+            <option value="null"> - </option>
             <option value="Line">Line</option>
             <option value="Bar">Bar</option>
+        </select><br><br>
         
         <label for="time_series_type">Graph Type</label><br>
         <select id="time_series_type" name="time_series_type">
+            <option value="null"> - </option>
             <option value="Intraday">Intraday</option>
             <option value="Daily">Daily</option>
             <option value="Weekly">Weekly</option>
             <option value="Monthly">Monthly</option>
-            
         </select><br><br>
         <label for="due_date">Start Date</label><br>
         <input type="date" ><br><br>
