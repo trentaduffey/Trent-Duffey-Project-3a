@@ -1,4 +1,9 @@
 # Scrum Team 6 | INFOTC-4320-Stock-Data-Visualizer
+# Importing flask and adding functionality:
+from flask import Flask, render_template
+
+app = flask(__name__)
+app.config['KEY'] = 'API_KEY'
 
 # ======= STOCK SYMBOL (Mia) =======
 def get_stock_symbol():
