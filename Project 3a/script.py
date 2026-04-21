@@ -3,7 +3,7 @@
 from flask import Flask, render_template
 
 app = flask(__name__)
-app.config['KEY'] = 'API_KEY'
+app.config['SECRET_KEY'] = 'your secret key'
 
 # ======= STOCK SYMBOL (Mia) =======
 def get_stock_symbol():
@@ -266,5 +266,8 @@ def main():
 
     data = querying_api(time_series_type, stock_symbol, API_KEY)
     GraphGeneration(data, ChartInput, begin_date, end_date, stock_symbol, time_series_type)
-    
+
+
+app.run(host = "0.0.0.0")
+
 main()
